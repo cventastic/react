@@ -2,8 +2,7 @@ FROM node:18-alpine
 
 RUN mkdir -p /usr/local/app
 WORKDIR /usr/local/app
-COPY ./app/package.json .
-RUN npm install
-COPY ./app/ .
+RUN npx create-react-app tictactoe
+WORKDIR /usr/local/app/tictactoe
  
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
