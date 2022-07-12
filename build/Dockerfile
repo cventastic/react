@@ -4,5 +4,6 @@ RUN mkdir -p /usr/local/app
 WORKDIR /usr/local/app
 RUN npx create-react-app tictactoe
 WORKDIR /usr/local/app/tictactoe
+COPY app/src src
  
 CMD [ "npm", "start" ]
